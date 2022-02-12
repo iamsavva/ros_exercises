@@ -25,7 +25,7 @@ def talker():
 
         scan_msg.ranges = list( np.random.uniform(scan_msg.range_min, 
                                                   scan_msg.range_max, 
-                                                  int( (scan_msg.angle_max-scan_msg.angle_min)/scan_msg.angle_increment )+1 ) )
+                                                  401 ) )
         
 
 

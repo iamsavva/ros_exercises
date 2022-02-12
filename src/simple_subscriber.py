@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import Float32
+import numpy as np
 
 def callback(data):
     rospy.loginfo("received %s", data.data)
-    float_log_pub.publish( data )
+    float_msg = Float32()
+    float_msg.data = np.log(data.data)
+    float_log_pub.publish( float_msg )
 
 def listener():
     rospy.init_node('simple_subscriber', anonymous=False)
