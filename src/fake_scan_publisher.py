@@ -3,6 +3,7 @@ import rospy
 import numpy as np
 from sensor_msgs.msg import LaserScan
 
+
 def talker():
     rospy.init_node('fake_scan_publisher', anonymous=False)
 
