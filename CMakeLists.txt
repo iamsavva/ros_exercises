@@ -32,6 +32,6 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-catkin_install_python(PROGRAMS src/simple_publisher.py src/simple_subscriber.py
+catkin_install_python(PROGRAMS src/simple_publisher.py src/simple_subscriber.py src/fake_scan_publisher.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
