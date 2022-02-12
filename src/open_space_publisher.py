@@ -15,7 +15,7 @@ def callback(data):
 
     os_msg.angle = 2.0/3.0*np.pi + 1.0/300.0*np.pi*mi
     os_msg.distance = data.ranges[mi]
-    print(os_msg)
+    # print(os_msg)
     os_pub.publish(os_msg)
     
     

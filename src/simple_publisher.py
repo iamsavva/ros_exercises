@@ -12,7 +12,7 @@ def talker():
         float_msg = Float32()
         float_msg.data = np.random.uniform(0,10,1)[0]
 
-        rospy.loginfo("published %s", float_msg)
+        # rospy.loginfo("published %s", float_msg)
         float_pub.publish(float_msg)
         rate.sleep()
 
