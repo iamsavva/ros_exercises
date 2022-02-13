@@ -33,7 +33,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-catkin_install_python(PROGRAMS src/simple_publisher.py src/simple_subscriber.py src/fake_scan_publisher.py src/open_space_publisher.py src/dynamic_tf_cam_publisher.py
+catkin_install_python(PROGRAMS src/simple_publisher.py src/simple_subscriber.py src/fake_scan_publisher.py src/open_space_publisher.py src/dynamic_tf_cam_publisher.py src/static_tf_cam_pubisher.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
