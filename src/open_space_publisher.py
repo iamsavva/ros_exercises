@@ -17,15 +17,17 @@ def callback(data):
     os_msg.distance = data.ranges[mi]
     # print(os_msg)
     os_pub.publish(os_msg)
-    
-    
 
 
 def listener():
     rospy.init_node('open_space_publisher', anonymous=False)
-    rospy.Subscriber("fake_scan", LaserScan, callback)
+    rospy.Subscriber(sub_topic, LaserScan, callback)
     rospy.spin()
 
 if __name__ == '__main__':
-    os_pub = rospy.Publisher('open_space', OpenSpace, queue_size=10)
+    # print(rospy.get_param_names())
+    pub_topic = rospy.get_param("/open_space_publisher/pub_topic", "open_space")
+    sub_topic = rospy.get_param("/open_space_publisher/sub_topic", "fake_scan")
+
+    os_pub = rospy.Publisher(pub_topic, OpenSpace, queue_size=10)
     listener()
